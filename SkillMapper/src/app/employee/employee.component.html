@@ -1,0 +1,120 @@
+<div class="form-group">
+  <label>Employee id:
+    <input #employeeid   class="form-control" id="id" onblur="fun1()" ><span id="eid"></span> 
+  </label><br/>
+  <label>Employee name:
+    <input #employeename class="form-control" id="en" onblur="fun2()"><span id="ena"></span>
+  </label><br/>
+  <label>Email:
+    <input #email class="form-control" id="myEmail" onblur="fun3()"><span id="email"></span>
+  </label><br/>
+  <label>EmployeePass:
+    <input #pass class="form-control" id="ps" onblur="fun4()"><span id="pass"></span>
+  </label><br/>
+  <label>Age:
+    <input #age class="form-control" id="ag" onblur="fun5()"><span id="age"></span>
+  </label><br/>
+  <label>Mobile:
+    <input #mobile class="form-control" id="mob" onblur="fun6()"><span id="mobile"></span>
+  </label><br/>
+  <label>Gender:
+    <input #gender class="form-control" id="gen" onblur="fun7()"><span id="gender"></span>
+  </label><br/>
+  <label>Qualification:
+    <input #qualification class="form-control" id="Quali" onblur="fun8()" required><span id="Quf"></span>
+  </label><br/>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(employeeid.value,employeename.value,email.value,pass.value,age.value,mobile.value,gender.value,qualification.value)">
+    ADD
+  </button>
+  
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="table-responsive">
+
+              <table id="mytable" class="table table-bordred table-striped">
+
+                   <thead>
+
+                        <th>Employee Id</th>
+
+                        <th>Employee Name</th>
+
+                        <th>Email Id</th>
+
+                        <th>Pass</th>
+
+                        <th>Age</th>
+
+                        <th>Mobile</th>
+                        
+                        <th>Gender</th>
+
+                        <th>Qualification</th>
+                       
+
+                        <th>Edit</th>
+
+                        <th>Delete</th>
+
+                   </thead>
+
+                   <tbody>
+
+                    <tr *ngFor="let employee of empl ">
+
+                        <td>{{employee.employeeid}}</td> 
+
+                        <td>{{employee.employeename}}</td>
+
+                        <td>{{employee.email}}</td>
+
+                        <td>{{employee.pass}}</td>
+
+                        <td>{{employee.age}}</td>
+
+                        <td>{{employee.mobile}}</td>
+
+                           <td>{{employee.gender}}</td>
+
+                           <td>{{employee.qualification}}</td>
+                        
+                      
+                        <td><a routerLink="/detail/{{employee.employeeid}}">Edit</a></td>
+                    
+               
+                      
+                        <td><button (click)="delete(employee)">Delete</button></td>
+
+                    </tr>
+
+   
+
+                   </tbody>
+
+            </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+ 
+
+
+

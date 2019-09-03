@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SkillMapper</title>
+<script type="text/javascript">
+function fun1()
+{
+  var cname,e;
+				cname=document.getElementById("id").value;
+					e=/^[0-9]*$/;
+					if(!(e.test(cname)))
+          	{
+										document.getElementById("eid").innerHTML="<font color='red'>Invalid/Enter Numbers Only</font>";
+					}
+          else
+          {
+            	document.getElementById("eid").innerHTML="<font color='red'></font>";
+          }
+
+}
+function fun2()
+{
+  var cname,e;
+				cname=document.getElementById("en").value;
+					e=/^[a-zA-Z]*$/;
+					if(!(e.test(cname)))
+          	{
+										document.getElementById("ena").innerHTML="<font color='red'>Invalid/Enter alphabet Only</font>";
+					}
+          else
+          {
+            	document.getElementById("ena").innerHTML="<font color='red'></font>";
+          }
+
+}
+function fun3()
+{
+  var cname,e;
+				cname=document.getElementById("myEmail").value;
+					e=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+					if(!(e.test(cname)))
+          	{
+										document.getElementById("email").innerHTML="<font color='red'>InvalidEmailAddress</font>";
+					}
+          else
+          {
+            	document.getElementById("email").innerHTML="<font color='red'></font>";
+          }
+
+}
+function fun4()
+{
+  var cname,e;
+				cname=document.getElementById("ps").value;
+					e=/^[a-zA-Z]*$/;
+					if(!(e.test(cname)))
+          	{
+										document.getElementById("pass").innerHTML="<font color='red'>Invalid/Enter alphabet Only</font>";
+					}
+          else
+          {
+            	document.getElementById("pass").innerHTML="<font color='red'></font>";
+          }
+}
+function fun5()
+{
+  var cname,e;
+				cname=document.getElementById("ag").value;
+					e=/^[0-9]*$/;
+					if(!(e.test(cname)))
+          	{
+										document.getElementById("age").innerHTML="<font color='red'>Invalid/Enter Numbers Only</font>";
+				   	}
+          else
+          {
+            	document.getElementById("age").innerHTML="<font color='red'></font>";
+          }
+
+}
+function fun6()
+{
+  var cname,e;
+				cname=document.getElementById("mob").value;
+				//	e=/^[0-9]*$/;
+					if((isNaN(cname)||(cname.length < 1) || (cname.length > 10)))
+          	{
+										document.getElementById("mobile").innerHTML="<font color='red'>EnterOnlyNumber10Digits</font>";
+				   	}
+          else
+          {
+            	document.getElementById("mobile").innerHTML="<font color='red'></font>";
+          }
+
+}
+function fun7()
+{
+  var cname,e;
+				cname=document.getElementById("gen").value;
+					e=/^[a-zA-Z]*$/;
+					if(!(e.test(cname)))
+          	{
+										document.getElementById("gender").innerHTML="<font color='red'>Invalid/Enter alphabet Only</font>";
+					}
+          else
+          {
+            	document.getElementById("gender").innerHTML="<font color='red'></font>";
+          }
+
+}
+
+function fun8()
+{
+  var cname,e;
+				cname=document.getElementById("Quali").value;
+					e=/^[a-zA-Z]*$/;
+					if(!(e.test(cname)))
+          	{
+										document.getElementById("Quf").innerHTML="<font color='red'>Invalid/Enter alphabet Only</font>";
+					}
+          else
+          {
+            	document.getElementById("Quf").innerHTML="<font color='red'></font>";
+          }
+
+}
+</script>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+  
+
+</html>
